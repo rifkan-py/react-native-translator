@@ -32,7 +32,7 @@ export default function App() {
         "http://34.229.90.253:5000/api/v1/translate",
         formData
       );
-      setAllTranslations((prev) => [...prev, data]);
+      setAllTranslations((prev) => [data, ...prev]);
     } catch (error) {
       console.error("Error:", error.stack);
     }
